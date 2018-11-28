@@ -80,7 +80,8 @@ public class Main extends JFrame {
 
 		@Override
 		public void actionPerformed(ActionEvent arg0) {
-			JOptionPane.showMessageDialog(null, arbol.inorden(arbol.getRaiz()), "Listado en Orden", 1);
+			String salida = arbol.inorden(arbol.getRaiz());
+			JOptionPane.showMessageDialog(null, salida.isEmpty() ? "No Hay Alumnos" : salida, "Listado en Orden", 1);
 		}
 
 	}
@@ -89,7 +90,8 @@ public class Main extends JFrame {
 
 		@Override
 		public void actionPerformed(ActionEvent arg0) {
-			JOptionPane.showMessageDialog(null, arbol.preOrden(), "Listado en Orden", 1);
+			String salida = arbol.preOrden();
+			JOptionPane.showMessageDialog(null, salida.isEmpty() ? "No Hay Alumnos" : salida, "Listado en Orden", 1);
 		}
 
 	}
@@ -98,7 +100,8 @@ public class Main extends JFrame {
 
 		@Override
 		public void actionPerformed(ActionEvent arg0) {
-			JOptionPane.showMessageDialog(null, arbol.postOrden(), "Listado en Orden", 1);
+			String salida = arbol.postOrden();
+			JOptionPane.showMessageDialog(null, salida.isEmpty() ? "No Hay Alumnos" : salida, "Listado en Orden", 1);
 		}
 
 	}
